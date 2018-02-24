@@ -123,3 +123,10 @@ application. Each new demand-loaded fragment should be added to the list of
 `fragments` in the included `polymer.json` file. This will ensure those
 components and their dependencies are added to the list of pre-cached components
 and will be included in the build.
+
+## References
+
+Here's some articles I used to create the presentation :
+
+* [What IS Flexbox?](http://spaceninja.com/2015/08/24/what-is-flexbox/) on SpaceNinja.com
+* [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) on CSS-Tricks
