@@ -20,20 +20,47 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .flex-parent {
-        display: flex;
+        @apply --layout-horizontal;
       }
+
+      .flex-parent.two { 
+            @apply --layout-vertical;
+          }
+
     </style>
 
-    <div class="card">
-      <!-- <div class="circle">2</div> -->
-
+    <div class="card">   
+      <h2>Horizontal</h2>
+      <p>Parent with layout as row</p>
       <pre>
         <code>
-          .flex-parent { display: flex; }
+          .flex-parent { 
+            @apply --layout-horizontal;
+          }
         </code>
       </pre>
 
       <div class="flex-parent">
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+      </div>
+  
+      
+      <h2>Vertical</h2>
+      <p>Parent with layout as column</p>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-vertical;
+          }
+        </code>
+      </pre>
+      <div class="flex-parent two">
         <div class="flex-child"></div>
         <div class="flex-child"></div>
         <div class="flex-child"></div>

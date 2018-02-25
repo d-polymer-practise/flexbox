@@ -16,16 +16,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-
         padding: 10px;
       }
+
+      .flex-parent {
+        @apply --layout-horizontal;
+      }
+      .flex-child {
+        @apply --layout-flex;
+      }
+
+      .flex-parent.two { 
+        @apply --layout-vertical;
+      }
+
     </style>
 
-    <div class="card">
-      <div class="circle">4</div>
-      <h1>View Four</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+    <div class="card">   
+      <h2>Horizontal with flex children</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-horizontal;
+          }
+          .flex-child {
+            @apply --layout-flex;
+          }
+        </code>
+      </pre>
+
+      <div class="flex-parent">
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+      </div>
+  
+      
+      <h2>Vertical with flex children</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-vertical-reverse;
+          }
+          .flex-child {
+            @apply --layout-flex;
+          }
+        </code>
+      </pre>
+      
+      <div class="flex-parent two">
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+      </div>
+
     </div>
   </template>
 

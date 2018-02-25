@@ -16,7 +16,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-
         padding: 10px;
       }
     </style>
@@ -26,19 +25,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h1>Overview</h1>
       <p>Flexbox is a new layout mode in CSS3</p>
       <ul>
-        <li><strong>block layout</strong> for laying out documents</li>
-        <li><strong>inline layout</strong> for laying out text</li>
-        <li><strong>positioned layout</strong> for explicit positioning</li>
-        </ul>
+        <li>
+          <strong>block layout</strong> for laying out documents</li>
+        <li>
+          <strong>inline layout</strong> for laying out text</li>
+        <li>
+          <strong>positioned layout</strong> for explicit positioning</li>
+      </ul>
       <p class="bold">What about floats? </p>
       <p>They were a CSS recreation of the old align attribute in HTML</p>
       <p>but they’re limited and buggy — as anyone who’s worked with a clearfix can attest</p>
+
+
+      <h1>In Polymer</h1>
+      <p>he iron-flex-layout component provides simple ways to use CSS flexible box layout, also known as flexbox. This component provides two
+          different ways to use flexbox.</p>
+        <p>-- layout classes</p>
+        <p>-- Custom CSS mixins</p>
     </div>
   </template>
 
   <script>
     class MyView1 extends Polymer.Element {
-      static get is() { return 'my-view1'; }
+      static get is() {
+        return 'my-view1';
+      }
     }
 
     window.customElements.define(MyView1.is, MyView1);
