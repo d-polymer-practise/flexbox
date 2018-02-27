@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="my-view2">
+<dom-module id="my-view7">
   <template>
     <style include="shared-styles">
       :host {
@@ -22,20 +22,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .flex-parent {
         @apply --layout-horizontal;
       }
+      .flex-child {
+        @apply --layout-flex;
+      }
 
       .flex-parent.two { 
-            @apply --layout-vertical;
-          }
+        @apply --layout-vertical;
+      }
 
     </style>
 
     <div class="card">   
-      <h2>Horizontal</h2>
-      <p>Parent with layout as row</p>
+      <h2>Horizontal layout with flex children</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-horizontal;
+          }
+          .flex-child {
+            @apply --layout-flex;
           }
         </code>
       </pre>
@@ -51,15 +56,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
   
       
-      <h2>Vertical</h2>
-      <p>Parent with layout as column</p>
+      <h2>Vertical layout with flex children</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-vertical;
           }
+          .flex-child {
+            @apply --layout-flex;
+          }
         </code>
       </pre>
+      
       <div class="flex-parent two">
         <div class="flex-child">1. Red</div>
         <div class="flex-child">2. Blue</div>
@@ -74,12 +82,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
-    class MyView2 extends Polymer.Element {
-      static get is() {
-        return 'my-view2';
-      }
+    class MyView7 extends Polymer.Element {
+      static get is() { return 'my-view7'; }
     }
 
-    window.customElements.define(MyView2.is, MyView2);
+    window.customElements.define(MyView7.is, MyView7);
   </script>
 </dom-module>
