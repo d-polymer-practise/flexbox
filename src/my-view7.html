@@ -20,27 +20,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .flex-parent {
+        height: 100px;
         @apply --layout-horizontal;
-      }
-      .flex-child {
-        @apply --layout-flex;
+        @apply --layout-start;
       }
 
-      .flex-parent.two { 
-        @apply --layout-vertical;
+      .flex-parent.center { 
+        @apply --layout-horizontal;
+        @apply --layout-center;
+      }
+
+      .flex-parent.end { 
+        @apply --layout-horizontal;
+        @apply --layout-end;
       }
 
     </style>
 
     <div class="card">   
-      <h2>Horizontal layout with flex children</h2>
+        <h1>Alignment in cross axis</h1>
+      <h2>Horizontal layout with align start</h2>
       <pre>
         <code>
           .flex-parent { 
+            height: 100px;
             @apply --layout-horizontal;
-          }
-          .flex-child {
-            @apply --layout-flex;
+            @apply --layout-start;
           }
         </code>
       </pre>
@@ -55,20 +60,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">7. Grey</div>
       </div>
   
-      
-      <h2>Vertical layout with flex children</h2>
+      <h2>Horizontal layout with align center</h2>
       <pre>
         <code>
           .flex-parent { 
-            @apply --layout-vertical;
-          }
-          .flex-child {
-            @apply --layout-flex;
+            height: 100px;
+            @apply --layout-horizontal;
+            @apply --layout-center;
           }
         </code>
       </pre>
       
-      <div class="flex-parent two">
+      <div class="flex-parent center">
+        <div class="flex-child">1. Red</div>
+        <div class="flex-child">2. Blue</div>
+        <div class="flex-child">3. Yellow</div>
+        <div class="flex-child">4. Turquoise</div>
+        <div class="flex-child">5. Orange</div>
+        <div class="flex-child">6. Purple</div>
+        <div class="flex-child">7. Grey</div>
+      </div>
+
+      <h2>Horizontal layout with align end</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            height: 100px;
+            @apply --layout-horizontal;
+            @apply --layout-end;
+          }
+        </code>
+      </pre>
+      
+      <div class="flex-parent end">
         <div class="flex-child">1. Red</div>
         <div class="flex-child">2. Blue</div>
         <div class="flex-child">3. Yellow</div>

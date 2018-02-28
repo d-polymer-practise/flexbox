@@ -34,9 +34,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-end-justified;
       }
 
+      .flex-parent.between { 
+        @apply --layout-horizontal;
+        @apply --layout-justified;
+      }
+
+      .flex-parent.around { 
+        @apply --layout-horizontal;
+        @apply --layout-around-justified;
+      }
+
     </style>
 
     <div class="card">   
+      <h1>Alignment in main axis</h1>
       <h2>Horizontal layout start justified</h2>
       <pre>
         <code>
@@ -87,9 +98,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             @apply --layout-horizontal;
             @apply --layout-end-justified;
           }
-          <!-- .flex-child {
-            @apply --layout-flex;
-          } -->
         </code>
       </pre>
 
@@ -103,6 +111,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">7. Grey</div>
       </div>
 
+      <h2>Horizontal layout justified with space between</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-horizontal;
+            @apply --layout-justified;
+          }
+        </code>
+      </pre>
+
+      <div class="flex-parent between">
+        <div class="flex-child">1. Red</div>
+        <div class="flex-child">2. Blue</div>
+        <div class="flex-child">3. Yellow</div>
+        <div class="flex-child">4. Turquoise</div>
+        <div class="flex-child">5. Orange</div>
+        <div class="flex-child">6. Purple</div>
+        <div class="flex-child">7. Grey</div>
+      </div>
+
+
+      <h2>Horizontal layout justified with around spacing</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-horizontal;
+            @apply @apply --layout-around-justified;;
+          }
+        </code>
+      </pre>
+
+      <div class="flex-parent around">
+        <div class="flex-child">1. Red</div>
+        <div class="flex-child">2. Blue</div>
+        <div class="flex-child">3. Yellow</div>
+        <div class="flex-child">4. Turquoise</div>
+        <div class="flex-child">5. Orange</div>
+        <div class="flex-child">6. Purple</div>
+        <div class="flex-child">7. Grey</div>
+      </div>
     </div>
   </template>
 
