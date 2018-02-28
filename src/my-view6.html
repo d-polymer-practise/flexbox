@@ -21,31 +21,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .flex-parent {
         @apply --layout-horizontal;
-      }
-      .flex-child {
-        @apply --layout-flex;
+        @apply --layout-start-justified;
       }
 
-      .flex-parent.two { 
-        @apply --layout-vertical;
+      .flex-parent.center { 
+        @apply --layout-horizontal;
+        @apply --layout-center-justified;
+      }
+
+      .flex-parent.end { 
+        @apply --layout-horizontal;
+        @apply --layout-end-justified;
       }
 
     </style>
 
     <div class="card">   
-      <h2>Horizontal layout with flex children</h2>
+      <h2>Horizontal layout start justified</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-horizontal;
+            @apply --layout-start-justified;
           }
-          .flex-child {
-            @apply --layout-flex;
-          }
+
         </code>
       </pre>
 
-      <div class="flex-parent">
+      <div class="flex-parent start">
         <div class="flex-child">1. Red</div>
         <div class="flex-child">2. Blue</div>
         <div class="flex-child">3. Yellow</div>
@@ -56,19 +59,41 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
   
       
-      <h2>Vertical layout with flex children</h2>
+      <h2>Horizontal layout center justified</h2>
       <pre>
         <code>
           .flex-parent { 
-            @apply --layout-vertical;
+            @apply --layout-horizontal;
+            @apply --layout-center-justified;
           }
-          .flex-child {
-            @apply --layout-flex;
-          }
+
         </code>
       </pre>
-      
-      <div class="flex-parent two">
+
+      <div class="flex-parent center">
+        <div class="flex-child">1. Red</div>
+        <div class="flex-child">2. Blue</div>
+        <div class="flex-child">3. Yellow</div>
+        <div class="flex-child">4. Turquoise</div>
+        <div class="flex-child">5. Orange</div>
+        <div class="flex-child">6. Purple</div>
+        <div class="flex-child">7. Grey</div>
+      </div>
+
+      <h2>Horizontal layout end justified</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-horizontal;
+            @apply --layout-end-justified;
+          }
+          <!-- .flex-child {
+            @apply --layout-flex;
+          } -->
+        </code>
+      </pre>
+
+      <div class="flex-parent end">
         <div class="flex-child">1. Red</div>
         <div class="flex-child">2. Blue</div>
         <div class="flex-child">3. Yellow</div>

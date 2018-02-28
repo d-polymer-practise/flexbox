@@ -130,3 +130,4 @@ Here's some articles I used to create the presentation :
 
 * [What IS Flexbox?](http://spaceninja.com/2015/08/24/what-is-flexbox/) on SpaceNinja.com
 * [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) on CSS-Tricks
+* [Flexbox presentation] (http://snapeuh.github.io/flexbox-presentation/) css flexbox

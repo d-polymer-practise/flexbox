@@ -21,25 +21,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .flex-parent {
         @apply --layout-horizontal;
+        @apply --layout-wrap;
       }
       .flex-child {
+        min-width: 200px;
         @apply --layout-flex;
       }
 
       .flex-parent.two { 
         @apply --layout-vertical;
+        @apply --layout-wrap;
       }
 
     </style>
 
     <div class="card">   
-      <h2>Horizontal layout with flex children</h2>
+      <h2>Horizontal layout with flex wrap</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-horizontal;
+            @apply --layout-wrap;
           }
           .flex-child {
+            min-width: 200px;
             @apply --layout-flex;
           }
         </code>
@@ -61,8 +66,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <code>
           .flex-parent { 
             @apply --layout-vertical;
+            @apply --layout-wrap;
           }
           .flex-child {
+            min-width: 200px;
             @apply --layout-flex;
           }
         </code>
