@@ -20,31 +20,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .flex-parent {
-        height: 100px;
-        @apply --layout-horizontal;
+        @apply --layout-vertical;
         @apply --layout-start;
       }
 
       .flex-parent.center { 
-        @apply --layout-horizontal;
         @apply --layout-center;
       }
 
       .flex-parent.end { 
-        @apply --layout-horizontal;
         @apply --layout-end;
       }
 
     </style>
 
     <div class="card">   
-        <h1>Alignment in cross axis</h1>
+        <h1>Alignment in cross axis - start | center | end</h1>
       <h2>Horizontal layout with align start</h2>
       <pre>
         <code>
           .flex-parent { 
             height: 100px;
-            @apply --layout-horizontal;
+            @apply --layout-vertical;
             @apply --layout-start;
           }
         </code>
@@ -65,7 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <code>
           .flex-parent { 
             height: 100px;
-            @apply --layout-horizontal;
+            @apply --layout-vertical;
             @apply --layout-center;
           }
         </code>
@@ -86,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <code>
           .flex-parent { 
             height: 100px;
-            @apply --layout-horizontal;
+            @apply --layout-vertical;
             @apply --layout-end;
           }
         </code>

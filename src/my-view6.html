@@ -25,29 +25,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .flex-parent.center { 
-        @apply --layout-horizontal;
         @apply --layout-center-justified;
       }
 
       .flex-parent.end { 
-        @apply --layout-horizontal;
         @apply --layout-end-justified;
       }
 
       .flex-parent.between { 
-        @apply --layout-horizontal;
         @apply --layout-justified;
       }
 
       .flex-parent.around { 
-        @apply --layout-horizontal;
         @apply --layout-around-justified;
       }
 
     </style>
 
     <div class="card">   
-      <h1>Alignment in main axis</h1>
+      <h1>Alignment in main axis - start | center | end | space-between | space-around</h1>
       <h2>Horizontal layout start justified</h2>
       <pre>
         <code>
@@ -137,7 +133,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <code>
           .flex-parent { 
             @apply --layout-horizontal;
-            @apply @apply --layout-around-justified;;
+            @apply --layout-around-justified;;
           }
         </code>
       </pre>
@@ -151,6 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">6. Purple</div>
         <div class="flex-child">7. Grey</div>
       </div>
+
     </div>
   </template>
 
