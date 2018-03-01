@@ -20,27 +20,64 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .flex-parent {
+        height: 100px;
         @apply --layout-horizontal;
       }
-      .flex-child {
-        @apply --layout-flex;
+
+
+      .flex-child:nth-child(1) {
+        @apply --layout-self-start;
+      }
+
+      .flex-child:nth-child(2) {
+        @apply --layout-self-center;
+      }
+
+      .flex-child:nth-child(3) {
+        @apply --layout-self-end;
+      }
+
+      .flex-child:nth-child(4) {
+        @apply --layout-self-stretch;
+      }
+
+      .flex-child:nth-child(5) {
+        @apply --layout-self-baseline;
       }
 
       .flex-parent.two { 
+        height: auto;
         @apply --layout-vertical;
       }
 
     </style>
 
     <div class="card">   
-      <h2>Horizontal layout with flex children</h2>
+      <h2>Horizontal layout with self aligned children</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-horizontal;
           }
-          .flex-child {
-            @apply --layout-flex;
+
+          .flex-child:nth-child(1) {
+            @apply --layout-self-start;
+          }
+    
+          .flex-child:nth-child(2) {
+            @apply --layout-self-center;
+          }
+    
+          .flex-child:nth-child(3) {
+            @apply --layout-self-end;
+          }
+
+          .flex-child:nth-child(4) {
+            @apply --layout-self-stretch;
+          }
+    
+          .flex-child:nth-child(5) {
+            @apply --layout-self-baseline;
           }
         </code>
       </pre>
@@ -56,14 +93,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
   
       
-      <h2>Vertical layout with flex children</h2>
+      <h2>Vertical layout with self aligned children</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-vertical;
           }
-          .flex-child {
-            @apply --layout-flex;
+
+          .flex-child:nth-child(1) {
+            @apply --layout-self-start;
+          }
+    
+          .flex-child:nth-child(2) {
+            @apply --layout-self-center;
+          }
+    
+          .flex-child:nth-child(3) {
+            @apply --layout-self-end;
+          }
+
+          .flex-child:nth-child(4) {
+            @apply --layout-self-stretch;
+          }
+    
+          .flex-child:nth-child(5) {
+            @apply --layout-self-baseline;
           }
         </code>
       </pre>
