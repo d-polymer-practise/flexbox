@@ -22,30 +22,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .flex-parent {
         @apply --layout-horizontal;
       }
-      .flex-child {
-        @apply --layout-flex;
-      }
 
-      .flex-parent.two { 
+      .flex-parent.two {
         @apply --layout-vertical;
       }
 
+      .one .flex-child:nth-child(3) {
+        order: -1;
+      }
+
+      .two .flex-child:nth-child(1) {
+        order: 1;
+      }
     </style>
 
-    <div class="card">   
-      <h2>Horizontal layout with flex children</h2>
+    <div class="card">
+      <h2>Child 3rd - changed placement to first</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-horizontal;
           }
-          .flex-child {
-            @apply --layout-flex;
+          .flex-child:nth-child(2) {
+            order: -1;
           }
         </code>
       </pre>
 
-      <div class="flex-parent">
+      <div class="flex-parent one">
         <div class="flex-child">1. Red</div>
         <div class="flex-child">2. Blue</div>
         <div class="flex-child">3. Yellow</div>
@@ -54,20 +58,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">6. Purple</div>
         <div class="flex-child">7. Grey</div>
       </div>
-  
-      
-      <h2>Vertical layout with flex children</h2>
+
+
+      <h2>Child 1st - changed placement to last</h2>
       <pre>
         <code>
           .flex-parent { 
             @apply --layout-vertical;
           }
-          .flex-child {
-            @apply --layout-flex;
+          .flex-child:nth-child(1) {
+            order: 1;
           }
         </code>
       </pre>
-      
+
       <div class="flex-parent two">
         <div class="flex-child">1. Red</div>
         <div class="flex-child">2. Blue</div>
@@ -83,7 +87,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <script>
     class MyView8 extends Polymer.Element {
-      static get is() { return 'my-view8'; }
+      static get is() {
+        return 'my-view8';
+      }
     }
 
     window.customElements.define(MyView8.is, MyView8);

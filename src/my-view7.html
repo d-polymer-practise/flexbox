@@ -24,6 +24,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-start;
       }
 
+      .flex-parent.horizontal {
+        @apply --layout-horizontal;
+      }
+
       .flex-parent.center { 
         @apply --layout-center;
       }
@@ -32,11 +36,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-end;
       }
 
+      .flex-parent.baseline { 
+        @apply --layout-baseline;
+      }
+
     </style>
 
     <div class="card">   
         <h1>Alignment in cross axis - start | center | end</h1>
-      <h2>Horizontal layout with align start</h2>
+      <h2>Alignment in cross axis - start</h2>
       <pre>
         <code>
           .flex-parent { 
@@ -57,7 +65,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">7. Grey</div>
       </div>
   
-      <h2>Horizontal layout with align center</h2>
+      <h2>Alignment in cross axis - center</h2>
       <pre>
         <code>
           .flex-parent { 
@@ -78,7 +86,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">7. Grey</div>
       </div>
 
-      <h2>Horizontal layout with align end</h2>
+      <div class="flex-parent horizontal center" hidden>
+          <div class="flex-child">1. Red</div>
+          <div class="flex-child">2. Blue</div>
+          <div class="flex-child">3. Yellow</div>
+          <div class="flex-child">4. Turquoise</div>
+          <div class="flex-child">5. Orange</div>
+          <div class="flex-child">6. Purple</div>
+          <div class="flex-child">7. Grey</div>
+        </div>
+
+      <h2>Alignment in cross axis - end</h2>
       <pre>
         <code>
           .flex-parent { 
@@ -98,6 +116,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">6. Purple</div>
         <div class="flex-child">7. Grey</div>
       </div>
+
+      <div class="flex-parent horizontal end" hidden>
+          <div class="flex-child">1. Red</div>
+          <div class="flex-child">2. Blue</div>
+          <div class="flex-child">3. Yellow</div>
+          <div class="flex-child">4. Turquoise</div>
+          <div class="flex-child">5. Orange</div>
+          <div class="flex-child">6. Purple</div>
+          <div class="flex-child">7. Grey</div>
+        </div>
 
     </div>
   </template>
