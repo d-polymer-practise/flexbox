@@ -30,6 +30,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-vertical;
       }
 
+      .specific .flex-child {
+        @apply --layout-flex-none;
+      }
+      .specific .flex-child:nth-child(3) {
+        @apply --layout-flex;
+      }
+
     </style>
 
     <div class="card">   
@@ -55,6 +62,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">7. Grey</div>
       </div>
   
+      <h2>Horizontal layout with specific flex children</h2>
+      <pre>
+        <code>
+          .flex-parent { 
+            @apply --layout-horizontal;
+          }
+          .flex-child:nth-child(3) {
+            @apply --layout-flex;
+          }
+        </code>
+      </pre>
+
+      <div class="flex-parent specific">
+        <div class="flex-child">1. Red</div>
+        <div class="flex-child">2. Blue</div>
+        <div class="flex-child">3. Yellow</div>
+        <div class="flex-child">4. Turquoise</div>
+        <div class="flex-child">5. Orange</div>
+        <div class="flex-child">6. Purple</div>
+        <div class="flex-child">7. Grey</div>
+      </div>
       
       <h2>Vertical layout with flex children</h2>
       <pre>
@@ -77,6 +105,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="flex-child">6. Purple</div>
         <div class="flex-child">7. Grey</div>
       </div>
+
 
     </div>
   </template>
